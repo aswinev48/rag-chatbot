@@ -1,12 +1,17 @@
 import os
 import shutil
+from dotenv import load_dotenv
+
 from langchain_community.document_loaders import PyPDFLoader
-from langchain.text_splitter import RecursiveCharacterTextSplitter
-from langchain_openai import OpenAIEmbeddings
+from langchain_text_splitters import RecursiveCharacterTextSplitter
+from langchain_community.embeddings import HuggingFaceEmbeddings
 from langchain_community.vectorstores import Chroma
+
+load_dotenv()
 
 DATA_PATH = "data"
 PERSIST_DIR = "chroma_db"
+
 
 def load_documents():
     docs = []
@@ -23,12 +28,14 @@ def load_documents():
             docs.extend(pages)
     return docs
 
+
 def split_docs(docs):
     splitter = RecursiveCharacterTextSplitter(
         chunk_size=700,
         chunk_overlap=100
     )
     return splitter.split_documents(docs)
+
 
 def build_index():
     if os.path.exists(PERSIST_DIR):
@@ -37,7 +44,10 @@ def build_index():
     docs = load_documents()
     chunks = split_docs(docs)
 
-    embeddings = OpenAIEmbeddings()
+    # ✅ LOCAL embeddings (NO API CALLS)
+    embeddings = HuggingFaceEmbeddings(
+        model_name="all-MiniLM-L6-v2"
+    )
 
     vectordb = Chroma.from_documents(
         documents=chunks,
@@ -46,7 +56,8 @@ def build_index():
     )
 
     vectordb.persist()
-    print("✅ Index built!")
+    print("✅ Index built with local embeddings!")
+
 
 if __name__ == "__main__":
     build_index()
