@@ -1,0 +1,575 @@
+{
+    "summary": {
+        "total_questions": 20,
+        "correct": 16,
+        "partial": 0,
+        "wrong": 2,
+        "hallucinated": 0,
+        "accuracy_rate": 0.8,
+        "hallucination_rate": 0.0,
+        "average_sources_per_answer": 4.0,
+        "timestamp": "2026-04-14T15:02:32.485592"
+    },
+    "details": [
+        {
+            "question": "What is the purpose of the leave policy?",
+            "expected": "Explains leave entitlement and procedure",
+            "answer": "The purpose of the leave policy is to provide additional leave to the aggrieved woman or man in cases of sexual harassment, beyond the leave they would otherwise be entitled to. This is part of the measures to support the aggrieved individual and ensure effective implementation of the policy (Source: POSH Policy -Gapblue.pdf, Page: 5).",
+            "sources": [
+                {
+                    "document": "POSH Policy -Gapblue.pdf",
+                    "page": 5,
+                    "relevance_score": 1.139
+                },
+                {
+                    "document": "Gapblue-Information Security-Policy V2.pdf",
+                    "page": 11,
+                    "relevance_score": 1.22
+                },
+                {
+                    "document": "Gapblue-Information Security-Policy V2.pdf",
+                    "page": 25,
+                    "relevance_score": 1.26
+                },
+                {
+                    "document": "Gapblue-Information Security-Policy V2.pdf",
+                    "page": 12,
+                    "relevance_score": 1.286
+                }
+            ],
+            "rating": "correct"
+        },
+        {
+            "question": "How is casual leave deducted?",
+            "expected": "Half-day deduction",
+            "answer": "I don't know.",
+            "sources": [
+                {
+                    "document": "POSH Policy -Gapblue.pdf",
+                    "page": 5,
+                    "relevance_score": 1.305
+                },
+                {
+                    "document": "POSH Policy -Gapblue.pdf",
+                    "page": 5,
+                    "relevance_score": 1.402
+                },
+                {
+                    "document": "Gapblue Financial Support Policy for Intercompany Fest.pdf",
+                    "page": 0,
+                    "relevance_score": 1.407
+                },
+                {
+                    "document": "HR Policy..pdf",
+                    "page": 34,
+                    "relevance_score": 1.415
+                }
+            ],
+            "rating": "partia;"
+        },
+        {
+            "question": "Who is eligible for leave benefits?",
+            "expected": "Employees",
+            "answer": "I don't know.",
+            "sources": [
+                {
+                    "document": "Gapblue-Information Security-Policy V2.pdf",
+                    "page": 11,
+                    "relevance_score": 1.265
+                },
+                {
+                    "document": "POSH Policy -Gapblue.pdf",
+                    "page": 5,
+                    "relevance_score": 1.286
+                },
+                {
+                    "document": "Gapblue-Information Security-Policy V2.pdf",
+                    "page": 25,
+                    "relevance_score": 1.295
+                },
+                {
+                    "document": "POSH Policy -Gapblue.pdf",
+                    "page": 5,
+                    "relevance_score": 1.339
+                }
+            ],
+            "rating": ""
+        },
+        {
+            "question": "What happens if leave rules are violated?",
+            "expected": "Penalty applies",
+            "answer": "I don't know.",
+            "sources": [
+                {
+                    "document": "POSH Policy -Gapblue.pdf",
+                    "page": 5,
+                    "relevance_score": 1.095
+                },
+                {
+                    "document": "Gapblue-Information Security-Policy V2.pdf",
+                    "page": 31,
+                    "relevance_score": 1.098
+                },
+                {
+                    "document": "Gapblue-Information Security-Policy V2.pdf",
+                    "page": 29,
+                    "relevance_score": 1.171
+                },
+                {
+                    "document": "Gapblue-Information Security-Policy V2.pdf",
+                    "page": 12,
+                    "relevance_score": 1.181
+                }
+            ],
+            "rating": "wrong"
+        },
+        {
+            "question": "What does POSH policy stand for?",
+            "expected": "Prevention of Sexual Harassment",
+            "answer": "POSH policy stands for \"Prevention of Sexual Harassment\" policy. It is designed to create a healthy working environment free from prejudice, gender bias, and sexual harassment, ensuring equality, honor, and dignity for all employees. (Source: POSH Policy -Gapblue.pdf, Page: 0)",
+            "sources": [
+                {
+                    "document": "POSH Policy -Gapblue.pdf",
+                    "page": 0,
+                    "relevance_score": 0.862
+                },
+                {
+                    "document": "Anti Curruption Policy.pdf",
+                    "page": 0,
+                    "relevance_score": 1.188
+                },
+                {
+                    "document": "Gapblue-Information Security-Policy V2.pdf",
+                    "page": 0,
+                    "relevance_score": 1.257
+                },
+                {
+                    "document": "Anti Curruption Policy.pdf",
+                    "page": 1,
+                    "relevance_score": 1.282
+                }
+            ],
+            "rating": "correct"
+        },
+        {
+            "question": "Who does POSH policy protect?",
+            "expected": "Employees",
+            "answer": "The POSH policy protects all employees of M/s GAPBLUE SOFTWARE LABS PVT LTD, ensuring they can work without fear of prejudice, gender bias, and sexual harassment. It emphasizes the right of employees to be treated with equality, honor, and dignity. (Source: POSH Policy -Gapblue.pdf, Page: 0)",
+            "sources": [
+                {
+                    "document": "POSH Policy -Gapblue.pdf",
+                    "page": 0,
+                    "relevance_score": 0.95
+                },
+                {
+                    "document": "Anti Curruption Policy.pdf",
+                    "page": 0,
+                    "relevance_score": 1.138
+                },
+                {
+                    "document": "Gapblue-Information Security-Policy V2.pdf",
+                    "page": 29,
+                    "relevance_score": 1.185
+                },
+                {
+                    "document": "Gapblue-Information Security-Policy V2.pdf",
+                    "page": 0,
+                    "relevance_score": 1.239
+                }
+            ],
+            "rating": "correct"
+        },
+        {
+            "question": "What kind of behavior is covered under POSH?",
+            "expected": "Sexual harassment",
+            "answer": "The POSH policy at Gapblue Software Labs Pvt Ltd defines \"sexual harassment\" to include the following types of unwelcome acts or behavior:\n\n1. **Physical contacts or advances**.\n2. **A demand or request for sexual favors**.\n3. **Making sexually colored remarks**.\n4. **Showing pornography**.\n5. **Any other unwelcome physical, verbal, or non-verbal conduct of a sexual nature**.\n\nAdditionally, certain circumstances connected to acts of sexual harassment may also amount to sexual harassment, such as:\n\n- **Implied or explicit promise of preferential treatment in employment**.\n- **Implied or explicit threat of detrimental treatment in employment**.\n- **Implied or explicit threat about present or future employment status**.\n- **Interference with work or creating an intimidating, offensive, or hostile work environment**.\n- **Humiliating treatment likely to affect health or safety**.\n\n(Source: POSH Policy -Gapblue.pdf, Page: 0-1)",
+            "sources": [
+                {
+                    "document": "POSH Policy -Gapblue.pdf",
+                    "page": 0,
+                    "relevance_score": 0.999
+                },
+                {
+                    "document": "POSH Policy -Gapblue.pdf",
+                    "page": 1,
+                    "relevance_score": 1.296
+                },
+                {
+                    "document": "POSH Policy -Gapblue.pdf",
+                    "page": 0,
+                    "relevance_score": 1.395
+                },
+                {
+                    "document": "Gapblue-Information Security-Policy V2.pdf",
+                    "page": 28,
+                    "relevance_score": 1.491
+                }
+            ],
+            "rating": "correct"
+        },
+        {
+            "question": "What action can be taken under POSH?",
+            "expected": "Complaint and investigation",
+            "answer": "Under the POSH policy of Gapblue Software Labs Pvt Ltd, the following actions can be taken in cases of sexual harassment:\n\n1. **Disciplinary Action**: The ICC (Internal Complaints Committee) may recommend to the Managing Director and Head of HR appropriate disciplinary actions, which may include transfer or termination of services (Source: POSH Policy -Gapblue.pdf, Page: 5).\n\n2. **Leave for the Aggrieved Employee**: The aggrieved employee may be granted leave in addition to the leave they are otherwise entitled to (Source: POSH Policy -Gapblue.pdf, Page: 5).\n\n3. **Relief Measures**: The ICC may grant other reliefs to the aggrieved employee as prescribed (Source: POSH Policy -Gapblue.pdf, Page: 5).\n\n4. **Support from Management**: The management is required to provide all necessary assistance to ensure the effective and speedy implementation of the policy (Source: POSH Policy -Gapblue.pdf, Page: 5).\n\n5. **Action Against Third Parties**: If sexual harassment occurs due to an act or omission by a third party or outsider, the Third Party Consultant (TPC) shall take necessary actions (Source: POSH Policy -Gapblue.pdf, Page: 5). \n\nThese measures aim to address and resolve complaints effectively while ensuring a safe and respectful workplace environment.",
+            "sources": [
+                {
+                    "document": "POSH Policy -Gapblue.pdf",
+                    "page": 0,
+                    "relevance_score": 0.939
+                },
+                {
+                    "document": "POSH Policy -Gapblue.pdf",
+                    "page": 3,
+                    "relevance_score": 1.316
+                },
+                {
+                    "document": "POSH Policy -Gapblue.pdf",
+                    "page": 5,
+                    "relevance_score": 1.33
+                },
+                {
+                    "document": "HR Policy..pdf",
+                    "page": 54,
+                    "relevance_score": 1.363
+                }
+            ],
+            "rating": "correct"
+        },
+        {
+            "question": "What is the goal of information security policy?",
+            "expected": "Protect company data",
+            "answer": "The goal of Gapblue's Information Security Policy is to protect its information assets to ensure their **Confidentiality, Integrity, and Availability**. This is crucial for achieving business goals, safeguarding competitive advantage, and maintaining market leadership by preventing unauthorized access, modification, denial of service, or repudiation of sensitive information (Source: Gapblue-Information Security-Policy V2.pdf, Pages: 3, 29).",
+            "sources": [
+                {
+                    "document": "Gapblue-Information Security-Policy V2.pdf",
+                    "page": 3,
+                    "relevance_score": 0.666
+                },
+                {
+                    "document": "Gapblue-Information Security-Policy V2.pdf",
+                    "page": 29,
+                    "relevance_score": 0.831
+                },
+                {
+                    "document": "Gapblue-Information Security-Policy V2.pdf",
+                    "page": 5,
+                    "relevance_score": 0.857
+                },
+                {
+                    "document": "Gapblue-Information Security-Policy V2.pdf",
+                    "page": 30,
+                    "relevance_score": 0.884
+                }
+            ],
+            "rating": "correct"
+        },
+        {
+            "question": "Who is responsible for data security?",
+            "expected": "Employees",
+            "answer": "The first line of defense in data security is the individual Gapblue user. Gapblue users are responsible for the security of all data that may come to them in any format. Additionally, users are responsible for the day-to-day, hands-on security of the information resources they access (Source: Gapblue-Information Security-Policy V2.pdf, Pages: 4, 7).",
+            "sources": [
+                {
+                    "document": "Gapblue-Information Security-Policy V2.pdf",
+                    "page": 3,
+                    "relevance_score": 0.824
+                },
+                {
+                    "document": "Gapblue-Information Security-Policy V2.pdf",
+                    "page": 8,
+                    "relevance_score": 0.899
+                },
+                {
+                    "document": "Gapblue-Information Security-Policy V2.pdf",
+                    "page": 4,
+                    "relevance_score": 0.932
+                },
+                {
+                    "document": "Gapblue-Information Security-Policy V2.pdf",
+                    "page": 7,
+                    "relevance_score": 0.939
+                }
+            ],
+            "rating": "correct"
+        },
+        {
+            "question": "What should be done in case of security breach?",
+            "expected": "Report immediately",
+            "answer": "In case of a security breach, the following actions should be taken:\n\n1. **Prompt Investigation**: Security breaches must be promptly investigated.\n2. **Escalation**: Reports of security incidents should be escalated as quickly as possible, and each member of Gapblue IT must inform other members rapidly.\n3. **Criminal Activity**: If criminal activity is suspected, the Gapblue IT officer must contact the appropriate law enforcement and investigative authorities immediately.\n4. **Analysis**: Each incident will be analyzed to determine if changes in the existing security structure are necessary. \n\n(Source: Gapblue-Information Security-Policy V2.pdf, Page: 7)",
+            "sources": [
+                {
+                    "document": "Gapblue-Information Security-Policy V2.pdf",
+                    "page": 7,
+                    "relevance_score": 0.844
+                },
+                {
+                    "document": "Gapblue-Information Security-Policy V2.pdf",
+                    "page": 23,
+                    "relevance_score": 1.033
+                },
+                {
+                    "document": "Gapblue-Information Security-Policy V2.pdf",
+                    "page": 13,
+                    "relevance_score": 1.05
+                },
+                {
+                    "document": "Gapblue-Information Security-Policy V2.pdf",
+                    "page": 28,
+                    "relevance_score": 1.051
+                }
+            ],
+            "rating": "correct"
+        },
+        {
+            "question": "What kind of data must be protected?",
+            "expected": "Confidential data",
+            "answer": "The following types of data must be protected:\n\n1. **Client Data**: This includes data across ERP, BI & Analytics, Custom Applications, and proprietary information accessed during consultation and integration projects (Source: Anti Curruption Policy.pdf, Page: 7).\n\n2. **Intellectual Property**: Protect intellectual property developed during R&D and emerging technology initiatives (Source: Anti Curruption Policy.pdf, Page: 7).\n\n3. **Gnie Platform Client Data**: Prevent unauthorized access to TimeGnie, GoalsGnie, and other Gnie Platform client data (Source: Anti Curruption Policy.pdf, Page: 7).\n\n4. **Data in Gen AI Solutions**: Ensure secure handling of data in Gen AI Solutions, including document processing and analysis (Source: Anti Curruption Policy.pdf, Page: 7).\n\n5. **Sensitive Corporate or Client-Level Information**: Avoid performing tasks involving sensitive information in public areas to prevent unauthorized viewing (Source: Gapblue-Information Security-Policy V2.pdf, Page: 18).\n\n6. **Electronic Data**: Store electronic data only in encrypted workspaces (Source: Gapblue-Information Security-Policy V2.pdf, Page: 18).\n\n7. **Transportable Media Data**: Sensitive data must be copied only to encrypted spaces on transportable media, and all transportable media must be wiped according to set standards when no longer in use (Source: Gapblue-Information Security-Policy V2.pdf, Page: 21). \n\n8. **Hard Copy Records**: Paper records must be securely stored and locked in file cabinets when not in use (Source: Gapblue-Information Security-Policy V2.pdf, Page: 18).",
+            "sources": [
+                {
+                    "document": "Anti Curruption Policy.pdf",
+                    "page": 7,
+                    "relevance_score": 0.824
+                },
+                {
+                    "document": "Gapblue-Information Security-Policy V2.pdf",
+                    "page": 18,
+                    "relevance_score": 0.86
+                },
+                {
+                    "document": "Gapblue-Information Security-Policy V2.pdf",
+                    "page": 21,
+                    "relevance_score": 0.902
+                },
+                {
+                    "document": "Gapblue-Information Security-Policy V2.pdf",
+                    "page": 21,
+                    "relevance_score": 0.905
+                }
+            ],
+            "rating": "correct"
+        },
+        {
+            "question": "What does financial support policy provide?",
+            "expected": "Financial assistance",
+            "answer": "The financial support policy provides financial assistance to Gapblue employees for costume rental and makeup expenses incurred during their participation in cultural performances as part of the Intercompany Fest. It aims to ease the financial burden associated with such participation (Source: Gapblue Financial Support Policy for Intercompany Fest.pdf, Page: 0).",
+            "sources": [
+                {
+                    "document": "Gapblue Financial Support Policy for Intercompany Fest.pdf",
+                    "page": 1,
+                    "relevance_score": 1.206
+                },
+                {
+                    "document": "Anti Curruption Policy.pdf",
+                    "page": 8,
+                    "relevance_score": 1.23
+                },
+                {
+                    "document": "Anti Curruption Policy.pdf",
+                    "page": 12,
+                    "relevance_score": 1.242
+                },
+                {
+                    "document": "Gapblue Financial Support Policy for Intercompany Fest.pdf",
+                    "page": 0,
+                    "relevance_score": 1.253
+                }
+            ],
+            "rating": "correct"
+        },
+        {
+            "question": "Who can avail financial support?",
+            "expected": "Employees",
+            "answer": "Financial support can be availed by all employees of Gapblue who are actively participating in cultural performances as part of the Intercompany Fest. The assistance is specifically extended for costume rental and makeup expenses associated with these performances (Source: Gapblue Financial Support Policy for Intercompany Fest.pdf, Page: 0).",
+            "sources": [
+                {
+                    "document": "Gapblue Financial Support Policy for Intercompany Fest.pdf",
+                    "page": 0,
+                    "relevance_score": 1.333
+                },
+                {
+                    "document": "Gapblue Financial Support Policy for Intercompany Fest.pdf",
+                    "page": 0,
+                    "relevance_score": 1.341
+                },
+                {
+                    "document": "Gapblue Financial Support Policy for Intercompany Fest.pdf",
+                    "page": 1,
+                    "relevance_score": 1.37
+                },
+                {
+                    "document": "Anti Curruption Policy.pdf",
+                    "page": 6,
+                    "relevance_score": 1.434
+                }
+            ],
+            "rating": "correct"
+        },
+        {
+            "question": "What types of expenses are covered?",
+            "expected": "Approved expenses",
+            "answer": "The Gapblue Financial Support Policy for Intercompany Fest covers expenses related to costume rental and makeup for cultural performances. Financial assistance is extended exclusively for these two types of expenses. (Source: Gapblue Financial Support Policy for Intercompany Fest.pdf, Page: 0)",
+            "sources": [
+                {
+                    "document": "Gapblue Financial Support Policy for Intercompany Fest.pdf",
+                    "page": 0,
+                    "relevance_score": 1.027
+                },
+                {
+                    "document": "Gapblue Financial Support Policy for Intercompany Fest.pdf",
+                    "page": 0,
+                    "relevance_score": 1.089
+                },
+                {
+                    "document": "Anti Curruption Policy.pdf",
+                    "page": 1,
+                    "relevance_score": 1.286
+                },
+                {
+                    "document": "Gapblue Financial Support Policy for Intercompany Fest.pdf",
+                    "page": 1,
+                    "relevance_score": 1.294
+                }
+            ],
+            "rating": "correct"
+        },
+        {
+            "question": "Is approval required for financial support?",
+            "expected": "Yes",
+            "answer": "I don't know.",
+            "sources": [
+                {
+                    "document": "Gapblue Financial Support Policy for Intercompany Fest.pdf",
+                    "page": 1,
+                    "relevance_score": 1.185
+                },
+                {
+                    "document": "Anti Curruption Policy.pdf",
+                    "page": 6,
+                    "relevance_score": 1.197
+                },
+                {
+                    "document": "Gapblue Financial Support Policy for Intercompany Fest.pdf",
+                    "page": 0,
+                    "relevance_score": 1.246
+                },
+                {
+                    "document": "Anti Curruption Policy.pdf",
+                    "page": 6,
+                    "relevance_score": 1.268
+                }
+            ],
+            "rating": "wrong"
+        },
+        {
+            "question": "What does anti-corruption policy prohibit?",
+            "expected": "Bribery",
+            "answer": "The anti-corruption policy prohibits the following:\n\n- **Bribery**: Offering, promising, giving, accepting, or soliciting anything of value to influence business decisions, secure contracts, or gain unfair advantage, which contradicts the corporate value of honesty.  \n- **Fraudulent or false statements** relating to financial matters.  \n- **Theft of any kind**.  \n- **Breaches of legal or regulatory requirements**.  \n- **Concealment of wrongdoing**.  \n- **Failure to adopt company policies**.  \n- **Requests for bribes or improper payments**.  \n- **Offers of gratifications or inappropriate gifts**.  \n- **Pressure to engage in corrupt practices**.  \n- **Misuse of client information for personal gain**.  \n- **Violations of the Anti-Corruption Policy**.  \n\n(Source: Anti Curruption Policy.pdf, Pages: 4, 10, 12)",
+            "sources": [
+                {
+                    "document": "Anti Curruption Policy.pdf",
+                    "page": 4,
+                    "relevance_score": 0.872
+                },
+                {
+                    "document": "Anti Curruption Policy.pdf",
+                    "page": 3,
+                    "relevance_score": 1.135
+                },
+                {
+                    "document": "Anti Curruption Policy.pdf",
+                    "page": 12,
+                    "relevance_score": 1.139
+                },
+                {
+                    "document": "Anti Curruption Policy.pdf",
+                    "page": 10,
+                    "relevance_score": 1.143
+                }
+            ],
+            "rating": "correct"
+        },
+        {
+            "question": "Who must follow anti-corruption policy?",
+            "expected": "All employees",
+            "answer": "The anti-corruption policy applies to all personnel covered under Gapblue Software Labs Pvt Ltd.'s Code of Conduct across all its services. (Source: Anti Curruption Policy.pdf, Page: 3)",
+            "sources": [
+                {
+                    "document": "Anti Curruption Policy.pdf",
+                    "page": 4,
+                    "relevance_score": 1.048
+                },
+                {
+                    "document": "Anti Curruption Policy.pdf",
+                    "page": 10,
+                    "relevance_score": 1.123
+                },
+                {
+                    "document": "Anti Curruption Policy.pdf",
+                    "page": 3,
+                    "relevance_score": 1.128
+                },
+                {
+                    "document": "Anti Curruption Policy.pdf",
+                    "page": 0,
+                    "relevance_score": 1.14
+                }
+            ],
+            "rating": "correct"
+        },
+        {
+            "question": "What should be done if corruption is suspected?",
+            "expected": "Report it",
+            "answer": "If corruption is suspected, employees should report their concerns immediately through the established reporting channels, which include:\n\n- **Line Manager**: Direct supervisor for immediate concerns.\n- **HR Department**: Email at Hr.support@gapblue.com.\n- **Anonymous Reporting**: Email at whistleblower@gapblue.com.\n- **Compliance Officer**: Contact Sreelakshmi Aravind.\n\nAdditionally, specific corruption-related concerns such as requests for bribes, offers of inappropriate gifts, pressure to engage in corrupt practices, misuse of client information for personal gain, or violations of the Anti-Corruption Policy should also be reported immediately through these channels (Source: Anti Curruption Policy.pdf, Page: 10).",
+            "sources": [
+                {
+                    "document": "Anti Curruption Policy.pdf",
+                    "page": 10,
+                    "relevance_score": 0.982
+                },
+                {
+                    "document": "Anti Curruption Policy.pdf",
+                    "page": 9,
+                    "relevance_score": 1.125
+                },
+                {
+                    "document": "Anti Curruption Policy.pdf",
+                    "page": 4,
+                    "relevance_score": 1.148
+                },
+                {
+                    "document": "Anti Curruption Policy.pdf",
+                    "page": 12,
+                    "relevance_score": 1.155
+                }
+            ],
+            "rating": "correct"
+        },
+        {
+            "question": "Does policy allow gifts or bribes?",
+            "expected": "No",
+            "answer": "No, the policy strictly prohibits gifts or bribes that could influence business decisions. It explicitly forbids offering, accepting, or paying gratifications or favors in cash or kind, as well as making improper payments to influence client decisions or secure contracts. Additionally, unauthorized benefits to government officials or business partners are prohibited (Source: Anti Corruption Policy.pdf, Page: 5).",
+            "sources": [
+                {
+                    "document": "Anti Curruption Policy.pdf",
+                    "page": 6,
+                    "relevance_score": 1.014
+                },
+                {
+                    "document": "Anti Curruption Policy.pdf",
+                    "page": 6,
+                    "relevance_score": 1.025
+                },
+                {
+                    "document": "Anti Curruption Policy.pdf",
+                    "page": 5,
+                    "relevance_score": 1.199
+                },
+                {
+                    "document": "Anti Curruption Policy.pdf",
+                    "page": 4,
+                    "relevance_score": 1.209
+                }
+            ],
+            "rating": "correct"
+        }
+    ]
+}

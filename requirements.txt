@@ -1,10 +1,9 @@
-langchain
-langchain-community
-openai
-chromadb
 fastapi
 uvicorn
-pypdf
-tiktoken
-python-dotenv
+langchain
+langchain-community
+langchain-openai
+langchain-chroma
+chromadb
+pydantic
 requests
