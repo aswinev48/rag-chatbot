@@ -1,155 +1,142 @@
-import json
 import requests
-from datetime import datetime
+import json
+from tabulate import tabulate
+
+API_URL = "http://127.0.0.1:8000/chat"
 
 # =========================
-# CONFIG
+# TEST QUESTIONS (20 TOTAL)
 # =========================
-API_URL = "http://127.0.0.1:8000/chat"   # use 127.0.0.1 explicitly
-OUTPUT_FILE = "evaluation_results.json"
+test_data = [
+    # HR POLICY
+    {"question": "What are the types of leaves?", "expected": "Earned Leave, Personal Leave, etc."},
+    {"question": "How many earned leaves are allowed?", "expected": "12 days"},
+    {"question": "What is the dress code for men?", "expected": "Formal wear"},
+    {"question": "What are working hours?", "expected": "10 AM to 7 PM"},
 
-# =========================
-# TEST DATA (20 QUESTIONS)
-# =========================
-test_cases = [
-    # HR Policy
-    {"question": "What is the purpose of the leave policy?", "expected": "Explains leave entitlement and procedure"},
-    {"question": "How is casual leave deducted?", "expected": "Half-day deduction"},
-    {"question": "Who is eligible for leave benefits?", "expected": "Employees"},
-    {"question": "What happens if leave rules are violated?", "expected": "Penalty applies"},
+    # IT SECURITY
+    {"question": "What is the purpose of information security policy?", "expected": "Protect data"},
+    {"question": "Can employees share confidential data?", "expected": "No"},
+    {"question": "What happens if data is leaked?", "expected": "Disciplinary action"},
+    {"question": "What is confidential information?", "expected": "Sensitive company data"},
 
-    # POSH Policy
-    {"question": "What does POSH policy stand for?", "expected": "Prevention of Sexual Harassment"},
-    {"question": "Who does POSH policy protect?", "expected": "Employees"},
-    {"question": "What kind of behavior is covered under POSH?", "expected": "Sexual harassment"},
-    {"question": "What action can be taken under POSH?", "expected": "Complaint and investigation"},
+    # FINANCE
+    {"question": "What is financial support policy?", "expected": "Reimbursement policy"},
+    {"question": "What is required for reimbursement?", "expected": "Bills"},
+    {"question": "Who approves claims?", "expected": "Finance team"},
+    {"question": "What happens for false claims?", "expected": "Disciplinary action"},
 
-    # Information Security Policy
-    {"question": "What is the goal of information security policy?", "expected": "Protect company data"},
-    {"question": "Who is responsible for data security?", "expected": "Employees"},
-    {"question": "What should be done in case of security breach?", "expected": "Report immediately"},
-    {"question": "What kind of data must be protected?", "expected": "Confidential data"},
+    # ASSET
+    {"question": "What is asset management policy?", "expected": "Manage assets"},
+    {"question": "What should employees do with assets?", "expected": "Use responsibly"},
+    {"question": "What happens if assets are lost?", "expected": "Employee liable"},
+    {"question": "When to return assets?", "expected": "Exit time"},
 
-    # Financial Support Policy
-    {"question": "What does financial support policy provide?", "expected": "Financial assistance"},
-    {"question": "Who can avail financial support?", "expected": "Employees"},
-    {"question": "What types of expenses are covered?", "expected": "Approved expenses"},
-    {"question": "Is approval required for financial support?", "expected": "Yes"},
-
-    # Anti-Corruption Policy
-    {"question": "What does anti-corruption policy prohibit?", "expected": "Bribery"},
-    {"question": "Who must follow anti-corruption policy?", "expected": "All employees"},
-    {"question": "What should be done if corruption is suspected?", "expected": "Report it"},
-    {"question": "Does policy allow gifts or bribes?", "expected": "No"}
+    # ANTI-CORRUPTION
+    {"question": "What is anti-corruption policy?", "expected": "Prevent bribery"},
+    {"question": "Can employees accept gifts?", "expected": "No"},
+    {"question": "What is corruption?", "expected": "Bribery"},
+    {"question": "What happens if violated?", "expected": "Legal action"},
 ]
 
 # =========================
-# MANUAL RATING FUNCTION
+# CALL API
 # =========================
-def get_manual_rating(question, answer):
-    print("\n---------------------------")
-    print(f"Q: {question}")
-    print(f"A: {answer}")
-    print("Rate (correct / partial / wrong / hallucinated): ", end="")
-    return input().strip().lower()
+def ask_question(question):
+    try:
+        response = requests.post(API_URL, json={"question": question})
+        data = response.json()
+
+        return {
+            "answer": data.get("answer", ""),
+            "sources": data.get("sources", [])
+        }
+
+    except Exception as e:
+        return {
+            "answer": f"ERROR: {str(e)}",
+            "sources": []
+        }
 
 
 # =========================
 # RUN EVALUATION
 # =========================
-results = []
+def run_evaluation():
+    results = []
 
-for test in test_cases:
-    try:
-        response = requests.post(
-            API_URL,
-            json={"question": test["question"]},
-            timeout=30
-        )
+    print("Running evaluation...\n")
 
-        print("\n🔍 Status Code:", response.status_code)
+    for item in test_data:
+        question = item["question"]
+        expected = item["expected"]
 
-        if response.status_code != 200:
-            print("❌ API Error:", response.text)
-            raise Exception("API returned non-200 status")
+        print(f"Q: {question}")
 
-        try:
-            data = response.json()
-        except Exception:
-            print("❌ JSON Parse Error:", response.text)
-            raise Exception("Invalid JSON response")
+        response = ask_question(question)
 
-        answer = data.get("answer", "")
-        sources = data.get("sources", [])
+        result = {
+            "question": question,
+            "expected_answer": expected,
+            "model_answer": response["answer"],
+            "sources": response["sources"],
+            "rating": ""  # to fill manually
+        }
 
-    except Exception as e:
-        print(f"\n❌ Error for question: {test['question']}")
-        print("Error details:", str(e))
+        results.append(result)
 
-        answer = "ERROR"
-        sources = []
+    # Save raw results
+    with open("evaluation_results.json", "w") as f:
+        json.dump(results, f, indent=4)
 
-    rating = get_manual_rating(test["question"], answer)
-
-    results.append({
-        "question": test["question"],
-        "expected": test["expected"],
-        "answer": answer,
-        "sources": sources,
-        "rating": rating
-    })
+    print("\n✅ Results saved to evaluation_results.json")
+    print("👉 Now manually add ratings (correct/partial/wrong/hallucinated)\n")
 
 
 # =========================
-# METRICS CALCULATION
+# METRICS
 # =========================
-total = len(results)
+def compute_metrics():
+    with open("evaluation_results.json", "r") as f:
+        data = json.load(f)
 
-correct = sum(1 for r in results if r["rating"] == "correct")
-partial = sum(1 for r in results if r["rating"] == "partial")
-wrong = sum(1 for r in results if r["rating"] == "wrong")
-hallucinated = sum(1 for r in results if r["rating"] == "hallucinated")
+    total = len(data)
+    correct = sum(1 for d in data if d["rating"] == "correct")
+    hallucinated = sum(1 for d in data if d["rating"] == "hallucinated")
+    total_sources = sum(len(d["sources"]) for d in data)
 
-avg_sources = sum(len(r["sources"]) for r in results) / total if total > 0 else 0
+    accuracy = correct / total if total else 0
+    hallucination_rate = hallucinated / total if total else 0
+    avg_sources = total_sources / total if total else 0
 
-accuracy = correct / total if total > 0 else 0
-hallucination_rate = hallucinated / total if total > 0 else 0
+    print("\n📊 METRICS")
+    print(f"Total Questions: {total}")
+    print(f"Accuracy Rate: {accuracy:.2f}")
+    print(f"Hallucination Rate: {hallucination_rate:.2f}")
+    print(f"Average Sources per Answer: {avg_sources:.2f}")
 
-summary = {
-    "total_questions": total,
-    "correct": correct,
-    "partial": partial,
-    "wrong": wrong,
-    "hallucinated": hallucinated,
-    "accuracy_rate": round(accuracy, 2),
-    "hallucination_rate": round(hallucination_rate, 2),
-    "average_sources_per_answer": round(avg_sources, 2),
-    "timestamp": datetime.now().isoformat()
-}
+    # Summary Table
+    table = []
+    for d in data:
+        table.append([
+            d["question"],
+            d["rating"],
+            len(d["sources"])
+        ])
 
-# =========================
-# SAVE RESULTS
-# =========================
-output = {
-    "summary": summary,
-    "details": results
-}
+    print("\n📋 SUMMARY TABLE")
+    print(tabulate(table, headers=["Question", "Rating", "Sources"], tablefmt="grid"))
 
-with open(OUTPUT_FILE, "w") as f:
-    json.dump(output, f, indent=4)
 
 # =========================
-# PRINT SUMMARY TABLE
+# MAIN
 # =========================
-print("\n📊 EVALUATION SUMMARY")
-print("-----------------------------")
-print(f"Total Questions: {summary['total_questions']}")
-print(f"Correct: {summary['correct']}")
-print(f"Partial: {summary['partial']}")
-print(f"Wrong: {summary['wrong']}")
-print(f"Hallucinated: {summary['hallucinated']}")
-print(f"Accuracy Rate: {summary['accuracy_rate']}")
-print(f"Hallucination Rate: {summary['hallucination_rate']}")
-print(f"Avg Sources/Answer: {summary['average_sources_per_answer']}")
+if __name__ == "__main__":
+    print("1. Run evaluation")
+    print("2. Compute metrics")
+    choice = input("Enter choice (1/2): ")
 
-print("\n✅ Evaluation Complete!")
+    if choice == "1":
+        run_evaluation()
+    elif choice == "2":
+        compute_metrics()
